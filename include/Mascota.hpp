@@ -25,6 +25,7 @@ public:
         return this->nombre;
     }
     int Decirhambre(){
-        return this->hambre;
+      return  this->hambre;
     }
+
 };
