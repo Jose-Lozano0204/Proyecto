@@ -1,0 +1,67 @@
+class Sonic{
+    +Correr()
+    +Saltar()
+    +Rodar()
+    +Atacar()
+}
+class Aro{
+    +Flotar()
+}
+class Enemigo{
+    +Atacar()
+    +Disparar()
+}
+class Puente{
+    +Estatico()
+}
+class Resorte{
+    +Flexionar()
+}
+class Flor{
+    +Estatico()
+}
+class Personaje {
+    +Correr()
+    +Saltar()
+    +Rodar()
+    +Atacar()
+    +Disparar()
+    +Volar()
+    }
+class Vida{
+    +Decreser()
+    +Aumentar()
+}
+class Tiempo{
+    +Contador()
+}
+class Nivel{
+    +Iniciar()
+    +Finalizar()
+} 
+class Ecsenario{
+    +Dias()
+    +Noches()
+}
+class Proyectil{
+    +Atacar()
+}
+
+
+Sonic o-- Aro 
+Ecsenario *-- Enemigo 
+Sonic o-- Puente 
+Sonic o-- Resorte 
+Ecsenario *-- Flor 
+Sonic--|> Personaje 
+Sonic *-- Vida 
+Ecsenario *-- Tiempo 
+Puente --|> Ecsenario 
+Resorte --* Ecsenario
+Enemigo --|> Personaje
+Enemigo o-- Proyectil
+Nivel--* Ecsenario
+Nivel *-- Tiempo
+Sonic o--Enemigo
+Aro --* Ecsenario 
+Sonic o-- Nivel 
