@@ -27,12 +27,4 @@ int main(int argc, char const *argv[])
 
     j1.atacan(4);
     return 0;
-
-    j1.personaje();
-    j1.enemigo();
-    j1.escenario();
-    j1.nivel();
-    j1.otroselementos();
-    j1.sonic();
-    j1.tiempo();
 }
