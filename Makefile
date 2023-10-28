@@ -1,5 +1,6 @@
 
+bin/Sonicmain : src/Sonicmain.cpp include/*.hpp
+	c++ src/Sonicmain.cpp -o bin/Sonicmain -I include/ -lcurses
 
-bin/ejecutable : src/main.cpp
-	c++ src/main.cpp -o bin/ejecutable -I include
-	
+run : bin/Sonicmain
+	./bin/Sonicmain

@@ -1,32 +1,17 @@
-#include <string>
-class Juego
+#pragma once
+#include <Dibujo.hpp>
+#include <Actualizable.hpp>
+
+class Sonic : public Dibujo, public Actualizable
 {
 private:
-    int vida;
-    std::string nombre;
-
+    /* data */
 public:
-    Juego(std::string nombre)
+    Sonic(/* args */) : Dibujo("titulo")
     {
-        this->vida = 100;
-        this->nombre = nombre;
     }
-
-    ~Juego() {}
-    void ataca()
+    ~Sonic() {}
+    void Actualizar()
     {
-        this->vida += 100;
-    }
-    void atacan(int atacan)
-    {
-        this->vida -= atacan;
-    }
-    std::string Decirnombre()
-    {
-        return this->nombre;
-    }
-    int Decirvida()
-    {
-        return this->vida;
     }
 };

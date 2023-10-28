@@ -1,3 +1,11 @@
+@startuml Sonicmain
+class Dibujo
+class Ventana
+class Sprite
+class Actualizable
+class Juego
+
+
 class Sonic{
     +Correr()
     +Saltar()
@@ -48,6 +56,13 @@ class Proyectil{
 }
 
 
+Sprite "1" *- "*" Dibujo
+Juego *-Sonic
+Juego *-Ecsenario
+Ventana --o Ecsenario
+Personaje -|> Sprite
+Ventana o-- Dibujo
+Ventana o--Actualizable
 Sonic o-- Aro 
 Ecsenario *-- Enemigo 
 Sonic o-- Puente 
